@@ -7,13 +7,13 @@ import  time
 from    weakref import proxy
 
 # SERVER VAR
-REALSERVER = 'hts.etrade.co.kr'
+REALSERVER = 'demo.etrade.co.kr'
 PORT = 20001
 
 # ACCOUNT VAR
-ID = "insuyu"
-PW = "best1"
-CERT_PW ='euston13!!'
+ID = "userid"
+PW = "passwd"
+CERT_PW =""
 
 class XASessionEvents:
     logInState = False
