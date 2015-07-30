@@ -1,7 +1,6 @@
 ## History (Y2015)##
 
 + [WK31]
- - **YouTube** [Big Data Analytics & Algorithmic Stock Trading / Backtesting](https://goo.gl/Ei4NY0) `2015.07.29`
  - Yahoo data download [YahooDownload.py](https://github.com/3WiseMen/python/blob/master/1.YahooDownload/YahooDownload.py)  `2015.07.28`
  - Xing simple login [SimpleLogIn.py](https://github.com/3WiseMen/python/blob/master/2.SimpleLogIn/SimpleLogIn.py) `2015.07.28`
  - Xing login 클래스구현 [LogIn.py](https://github.com/3WiseMen/python/blob/master/3.LogIn/LogIn.py) `2015.07.28`
