@@ -1,6 +1,7 @@
 ## History (Y2015)##
 
 + [WK31]
+ - Golden Cross test [GoldenCross.py](https://github.com/3WiseMen/python/blob/master/7.GoldenCross/GoldenCross.py)  `2015.07.30`
  - Yahoo data download [YahooDownload.py](https://github.com/3WiseMen/python/blob/master/1.YahooDownload/YahooDownload.py)  `2015.07.28`
  - Xing simple login [SimpleLogIn.py](https://github.com/3WiseMen/python/blob/master/2.SimpleLogIn/SimpleLogIn.py) `2015.07.28`
  - Xing login 클래스구현 [LogIn.py](https://github.com/3WiseMen/python/blob/master/3.LogIn/LogIn.py) `2015.07.28`
