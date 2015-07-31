@@ -5,7 +5,9 @@ import matplotlib.pyplot as plt
 import matplotlib.ticker as mticker
 import matplotlib.dates as mdates
 from matplotlib.dates import date2num
-
+import matplotlib
+from matplotlib.finance import candlestick_ochl
+matplotlib.rcParams.update({'font.size':9})
 
 # from pandas import DataFrame
 
@@ -18,9 +20,15 @@ def Graph(code, start_date, end_date):
 
     DB = pd.read_csv(code + str('.csv'))
 
+    CandleData = []
     DateIndex = []
     for index, row in DB.iterrows():
-        DateIndex.append(date2num(datetime.strptime(row['Date'], "%Y-%m-%d")))
+        date = datetime.strptime(row['Date'], "%Y-%m-%d")
+        DateIndex.append(date2num(date))
+        append_me = date2num(date), row['Open'], row['High'], row['Low'], row['Close'], row['Volume']
+        CandleData.append(append_me)
+
+
         #t = datetime.strptime(row['Date'], "%Y-%m-%d")
         #DateIndex.append( t.strftime("%Y%m%d") )
 
@@ -28,22 +36,41 @@ def Graph(code, start_date, end_date):
     # Display Chart
     scale = 1.5
     fig = plt.figure(figsize=(6 * scale, 4 * scale))
-    # fig.set_size_inches(20,10)
-    chart = plt.subplot(1, 1, 1)
-    chart.plot_date(DateIndex, DB['Adj Close'], '-', color='#808080', linewidth=1.0, label='Close')
-    chart.plot_date(DateIndex, DB['MA20'],      '-', color='#FF0000', linewidth=2.0, label='MA20')
-    chart.plot_date(DateIndex, DB['MA200'],     '-', color='#0000FF', linewidth=2.0, label='MA200')
-    chart.xaxis.set_major_locator(mticker.MaxNLocator(10))
-    chart.xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m-%d'))
 
+    #chart1 = plt.subplot(2, 1, 1)
+    chart1 = plt.subplot2grid((5,4), (0,0), rowspan=4, colspan=4)
+    chart1.plot_date(DateIndex, DB['Adj Close'], '-', color='#808080', linewidth=1.0, label='Close')
+    chart1.plot_date(DateIndex, DB['MA20'],      '-', color='#FF0000', linewidth=2.0, label='MA20')
+    chart1.plot_date(DateIndex, DB['MA200'],     '-', color='#0000FF', linewidth=2.0, label='MA200')
+    #candlestick_ochl(chart1, CandleData, width=0.4, colorup='#77d879', colordown='#db3f3f')
+
+
+    chart1.xaxis.set_major_locator(mticker.MaxNLocator(10))
+    chart1.xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m-%d'))
+    plt.ylabel('Stock price')
+    plt.grid(True)
     plt.axhline(y=0.0, xmin=0, xmax=1, hold=None)
     plt.title(code)
-    plt.xlabel('Date')
-    plt.ylabel('Price')
+
     plt.legend()
+    plt.xticks(rotation=45)
+    plt.setp(chart1.get_xticklabels(), visible=False)
+
+
+    #chart2 = plt.subplot(2, 1, 2, sharex=chart1)
+    chart2 = plt.subplot2grid((5,4), (4,0), sharex=chart1, rowspan=1, colspan=4 )
+    chart2.bar(DateIndex, DB['Volume'])
+    #chart2.plot_date(DateIndex, DB['Volume'], '-', color='#808080', linewidth=1.0, label='Close')
+    chart2.xaxis.set_major_locator(mticker.MaxNLocator(10))
+    chart2.axes.yaxis.set_ticklabels([])
+    plt.ylabel('Price')
     plt.grid(True)
     plt.xticks(rotation=45)
-    #plt.subplots_adjust(left=0.05, bottom=0.05, right=0.96, top=0.96, wspace=0.2, hspace=0)
+    plt.xlabel('Date')
+
+
+
+    plt.subplots_adjust(left=0.09, bottom=0.05, right=0.96, top=0.96, wspace=0.2, hspace=0)
 
     plt.show()
     fig.savefig(code, dpi=600)
