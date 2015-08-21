@@ -1,3 +1,4 @@
+import os
 import sys
 from PyQt4.QtGui import *
  
@@ -15,15 +16,13 @@ window.setWindowTitle("Hello World!")
  
 
 # ==========================================================
-# Show a message box
-result = QMessageBox.question(window, 'Message', "Do you like Python?", QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
+# Get filename using QFileDialog
+filename = QFileDialog.getOpenFileName(window, 'Open File', './')
+print filename
  
-if result == QMessageBox.Yes:
-    print 'Yes.'
-else:
-    print 'No.'        
- 
- 
+# print file contents
+with open(filename, 'r') as f:
+    print(f.read())
 # ==========================================================
 
  

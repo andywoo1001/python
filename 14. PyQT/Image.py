@@ -1,3 +1,4 @@
+import os
 import sys
 from PyQt4.QtGui import *
  
@@ -15,14 +16,11 @@ window.setWindowTitle("Hello World!")
  
 
 # ==========================================================
-# Show a message box
-result = QMessageBox.question(window, 'Message', "Do you like Python?", QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
- 
-if result == QMessageBox.Yes:
-    print 'Yes.'
-else:
-    print 'No.'        
- 
+# Create widget
+label = QLabel(window)
+pixmap = QPixmap(os.getcwd() + '/logo.jpg')
+label.setPixmap(pixmap)
+window.resize(pixmap.width(),pixmap.height())
  
 # ==========================================================
 

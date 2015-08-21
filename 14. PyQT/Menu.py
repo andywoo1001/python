@@ -15,15 +15,16 @@ window.setWindowTitle("Hello World!")
  
 
 # ==========================================================
-# Show a message box
-result = QMessageBox.question(window, 'Message', "Do you like Python?", QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
+# Create main menu
+mainMenu = window.menuBar()
+fileMenu = mainMenu.addMenu('&File')
  
-if result == QMessageBox.Yes:
-    print 'Yes.'
-else:
-    print 'No.'        
- 
- 
+# Add exit button
+exitButton = QAction(QIcon('exit24.png'), 'Exit', window)
+exitButton.setShortcut('Ctrl+Q')
+exitButton.setStatusTip('Exit application')
+exitButton.triggered.connect(window.close)
+fileMenu.addAction(exitButton)
 # ==========================================================
 
  

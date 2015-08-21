@@ -15,14 +15,10 @@ window.setWindowTitle("Hello World!")
  
 
 # ==========================================================
-# Show a message box
-result = QMessageBox.question(window, 'Message', "Do you like Python?", QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
- 
-if result == QMessageBox.Yes:
-    print 'Yes.'
-else:
-    print 'No.'        
- 
+# Create textbox
+textbox = QLineEdit(window)
+textbox.move(20, 20)
+textbox.resize(280,40)
  
 # ==========================================================
 

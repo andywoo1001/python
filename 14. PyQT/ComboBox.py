@@ -11,18 +11,23 @@ window = QMainWindow()
 window.resize(320, 240)
  
 # Set window title  
-window.setWindowTitle("Hello World!") 
+window.setWindowTitle("PyQT ComboBox") 
  
 
 # ==========================================================
-# Show a message box
-result = QMessageBox.question(window, 'Message', "Do you like Python?", QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
- 
-if result == QMessageBox.Yes:
-    print 'Yes.'
-else:
-    print 'No.'        
- 
+
+# Create combobox
+combo = QComboBox(window)
+combo.addItem("Python")
+combo.addItem("Perl")
+combo.addItem("Java")
+combo.addItem("C++")
+combo.move(20,20)
+
+print combo.x()
+print combo.y() 
+print combo.size().width()
+print combo.size().height()
  
 # ==========================================================
 

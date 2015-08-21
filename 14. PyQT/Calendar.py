@@ -11,17 +11,16 @@ window = QMainWindow()
 window.resize(320, 240)
  
 # Set window title  
-window.setWindowTitle("Hello World!") 
+window.setWindowTitle("PyQT ComboBox") 
  
 
 # ==========================================================
-# Show a message box
-result = QMessageBox.question(window, 'Message', "Do you like Python?", QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
- 
-if result == QMessageBox.Yes:
-    print 'Yes.'
-else:
-    print 'No.'        
+
+# Create calendar
+cal = QCalendarWidget(window)
+cal.setGridVisible(False)
+cal.move(0, 0)
+cal.resize(320,240) 
  
  
 # ==========================================================
