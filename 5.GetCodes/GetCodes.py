@@ -11,8 +11,8 @@ DEMOSERVER = 'demo.etrade.co.kr'
 PORT = 20001
 
 # ACCOUNT VAR
-ID = "insuyu"
-PW = "demo00"
+ID = ""
+PW = ""
 CERT_PW =""
 
 
