@@ -11,8 +11,8 @@ DEMOSERVER = 'demo.etrade.co.kr'
 PORT = 20001
 
 # ACCOUNT VAR
-ID = "userid"
-PW = "passwd"
+ID = "insuyu"
+PW = "demo00"
 CERT_PW =""
 
 
@@ -79,7 +79,8 @@ class XAQuery_t8430():
     def OnReceive(self):
         nCount = self.event.GetBlockCount('t8430OutBlock')                
         for i in range(nCount):
-            print(i, ":", self.GetFieldData('t8430OutBlock', 'shcode', i), self.GetFieldData('t8430OutBlock', 'hname', i))            
+            print('%1s,%6s,%s' % (  self.GetFieldData('t8430OutBlock', 'gubun', i), self.GetFieldData('t8430OutBlock', 'shcode', i), self.GetFieldData('t8430OutBlock', 'hname', i)))
+   
  
                    
           
