@@ -48,7 +48,7 @@ def Parse_Infostock_html(url, page):
 
 
 if __name__ == "__main__":
-	for page in range(1,999):
+	for page in range(1,2):
 		link = 'http://vip.mk.co.kr/newSt/news/news_list.php?p_page=%d&sCode=122&termDatef=&search=&topGubun=' % page
 		Parse_Infostock_html(link, page)
 
