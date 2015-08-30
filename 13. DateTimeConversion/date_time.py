@@ -2,6 +2,13 @@ from datetime import datetime
 import time
 
 #-------------------------------------------------
+# Current time
+#-------------------------------------------------
+
+from time import gmtime, strftime
+strftime("%Y-%m-%d %H:%M:%S", gmtime())
+
+#-------------------------------------------------
 # conversions to strings
 #-------------------------------------------------
 # datetime object to string
