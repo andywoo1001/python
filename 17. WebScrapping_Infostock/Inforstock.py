@@ -5,7 +5,7 @@ from bs4 import BeautifulSoup
 import sqlite3
 from datetime import datetime
 import time
-
+from time import gmtime, strftime
 
 
 def Download_html(url, filename):
@@ -50,7 +50,7 @@ def Parse_Infostock_html(url, page):
 			text_title = unicode(text_title)
 
 			#print (count, text_time, text_title)
-			print ('Page%d-%d %s %s' % (page,count, text_time, text_title) )
+			print ('%s Page%d-%d %s %s' % ( strftime("%H:%M:%S", time.localtime()), page,count, text_time, text_title) )
 
 			cursor.execute("INSERT INTO INFOSTOCK VALUES (?,?,?)", (text_time, text_link, text_title) )
 			connect.commit()
