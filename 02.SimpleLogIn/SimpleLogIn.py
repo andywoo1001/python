@@ -19,7 +19,7 @@ class XASessionEvents:
 if __name__ == "__main__":
     inXASession = win32com.client.DispatchWithEvents("XA_Session.XASession", XASessionEvents)
     inXASession.ConnectServer("demo.etrade.co.kr", 20001)
-    inXASession.Login("insuyu", "demo00", "", 1, 0)
+    inXASession.Login("userid", "passwd", "", 1, 0)
 
     while XASessionEvents.logInState == 0:
         pythoncom.PumpWaitingMessages()
