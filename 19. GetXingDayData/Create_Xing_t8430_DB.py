@@ -24,10 +24,10 @@ def main():
 		print('%1s,%6s,%s' % (row['gubun'], row['shcode'], row['hname']) )
    
 	conn = sqlite3.connect("t8430.db")
-	DBUtil.create_table_for_outblock(conn.cursor(), 'SHCODES_TB', 't8430', 't8430OutBlock', ['shcode'])
+	DBUtil.create_table_for_outblock(conn.cursor(), 'CODE_TB', 't8430', 't8430OutBlock', ['shcode'])
 	conn.commit()
 
-	DBUtil.insert_for_outblock(conn.cursor(), 'SHCODES_TB', t8430['t8430OutBlock'], place_flag = True)
+	DBUtil.insert_for_outblock(conn.cursor(), 'CODE_TB', t8430['t8430OutBlock'], place_flag = True)
 	conn.commit()
 
 	xing.close()
