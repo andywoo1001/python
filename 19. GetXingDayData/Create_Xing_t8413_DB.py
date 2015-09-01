@@ -13,7 +13,7 @@ def main():
 		print ('Connection Error! Exit')
 		sys.exit(0)
 
-	conn = sqlite3.connect("t8430.db")
+	conn = sqlite3.connect("XingDB.db")
 	
 	select_query = "SELECT shcode from CODE_TB"
 	ret = conn.cursor().execute(select_query)

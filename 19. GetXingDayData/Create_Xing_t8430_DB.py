@@ -19,18 +19,34 @@ def main():
 	inblock_query_t8430 = { 't8430InBlock' : { 'gubun' : 0 } }
 	t8430 = xing.query('xing.t8430', inblock_query_t8430)
 	print ('number of list : %d' % len(t8430['t8430OutBlock']) )
-		
-	for row in t8430['t8430OutBlock']:
-		print('%1s,%6s,%s' % (row['gubun'], row['shcode'], row['hname']) )
-   
+	
+
 	conn = sqlite3.connect("t8430.db")
+	
+	# Create a new table CODE_TB
 	DBUtil.create_table_for_outblock(conn.cursor(), 'CODE_TB', 't8430', 't8430OutBlock', ['shcode'])
 	conn.commit()
-
+	# Submit CODE_TB
 	DBUtil.insert_for_outblock(conn.cursor(), 'CODE_TB', t8430['t8430OutBlock'], place_flag = True)
 	conn.commit()
+	print ('CODE_TB table is created')
 
+	# Create a table for each stock AXXXXXX
+"""	index = 1
+	for row in t8430['t8430OutBlock']:
+		gubun 	= row['gubun']
+		shcode 	= row['shcode']
+		hname	= row['hname']
+		
+		# Create a new t1305 table for each stock
+		table_name = 'A'+shcode
+		DBUtil.create_table_for_outblock(conn.cursor(), table_name, 't1305', 't1305OutBlock1', ['date'])
+		conn.commit()
+		print('%d %1s %6s %s' % (index, gubun, shcode, hname))
+		index += 1
 	xing.close()
+
+	print ('Table (%d) is created in XingDB.db ' % index )"""
 
 
 
