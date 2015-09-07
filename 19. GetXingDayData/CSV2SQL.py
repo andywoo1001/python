@@ -101,7 +101,8 @@ for filename in os.listdir('./'):
 		print ('INSERT ')
 
 		for i in range(len(DB)):
-			shcode      = '0'*(6-len(DB['shcode'][i])) + DB['shcode'][i]
+			shcode		= '%s' % DB['shcode'][i]
+			shcode      = '0'*(6-len(shcode)) + shcode 
 			date        = '%8s' % DB['date'][i]   
 			open        = '%8d' % DB['open'][i]
 			high        = '%8d' % DB['high'][i]
