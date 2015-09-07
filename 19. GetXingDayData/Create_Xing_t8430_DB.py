@@ -30,6 +30,7 @@ def main():
 	DBUtil.insert_for_outblock(conn.cursor(), 'CODE_TB', t8430['t8430OutBlock'], place_flag = True)
 	conn.commit()
 	print ('CODE_TB table is created')
+	conn.close()
 
 	# Create a table for each stock AXXXXXX
 """	index = 1

@@ -1,3 +1,8 @@
+# -*- coding: utf-8 -*-
+
+# Purpose: Xing(pystock 0.0.4a code list
+# Date: 2015-08-30
+
 import sqlite3
 from pystock_xingAPI import *
 import  pandas as pd
@@ -7,20 +12,22 @@ import time
 from time import gmtime, strftime
 
 xing = Xing()
+	
+if xing.open("demo.ebestsec.co.kr", 20001, 1, 1, "insuyu", "demo00", "") == False:
+	print ('Connection Error! Exit')
+	sys.exit(0)
 
-xing.open("demo.ebestsec.co.kr", 20001, 1, 1, "insuyu", "demo00", "")
 
-#inblock_query_t8430 = { 't8430InBlock' : { 'gubun' : 0 } }
-#t8430 = xing.query('xing.t8430', inblock_query_t8430)
 
 t1305Column = ['volume', 'value', 'sojinrate', 'high', 'covolume', 'l_change', 'o_diff', 'marketcap', 'low', 'h_sign', 'chdegree', 'shcode', 
 'o_change', 'l_diff', 'diff', 'date', 'open', 'sign', 'h_diff', 'h_change', 'ppvolume', 'l_sign', 'changerate', 'fpvolume',  'o_sign', 'change', 'close', 'diff_vol']
 
-conn = sqlite3.connect("XingDB.db")
+#conn = sqlite3.connect("XingDB.db")
 t8430 = conn.cursor().execute("SELECT shcode, hname, gubun, etfgubun from CODE_TB").fetchall()
 print ('number of codes from t8430.db : %d' % len(t8430) )
 
-startIndex = 1568
+
+startIndex = 0
 endIndex = len(t8430)
 for index in range(startIndex, endIndex):
 	shcode 	= t8430[index][0] #shcode
@@ -61,3 +68,4 @@ for index in range(startIndex, endIndex):
 		else:
 			inblock_query_t1305['t1305InBlock']['idx'] = t1305['t1305OutBlock']['idx']
 			inblock_query_t1305['continue_query'] = Trues
+
