@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import pandas as pd
 import pandas.io.data as web
 from datetime import datetime
@@ -89,7 +91,7 @@ def Read_CVS_Files(name, Baseline, Crossline):
 	Investment = '{:,.0f}'.format(Initial_Account_Value)
 	Current_Value = '{:,.0f}'.format(Total_Value)
 	Net_Profit = '{:,.0f}'.format(Total_Value - Initial_Account_Value)
-	print("SUMMARY: Investment= ₩%s, Current Value= ₩%s  Net Profit= ₩%s  ROI= %.2f" % (
+	print("SUMMARY: Investment= ₩/%s, Current Value= ₩%s  Net Profit= ₩%s  ROI= %.2f" % (
 	Investment, Current_Value, Net_Profit, (Total_Value / Initial_Account_Value)))
 
 	#DB['DateIdx'] = datetime.strptime(DB['Date'],"%Y-%m-%d")
