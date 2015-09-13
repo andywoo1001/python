@@ -1,0 +1,33 @@
+<RCC>
+  <qresource prefix="basic">
+    <file>resources/AnalyzerLogo300.jpg</file>
+    <file>resources/capture.png</file>
+    <file>resources/icons/copy12.png</file>
+    <file>resources/icons/document65.png</file>
+    <file>resources/icons/document178.png</file>
+    <file>resources/icons/door13.png</file>
+    <file>resources/icons/download59.png</file>
+    <file>resources/icons/floppy13.png</file>
+    <file>resources/icons/folder79.png</file>
+    <file>resources/icons/folder80.png</file>
+    <file>resources/icons/folder81.png</file>
+    <file>resources/icons/plug2.png</file>
+    <file>resources/icons/plug42.png</file>
+    <file>resources/icons/power107.png</file>
+    <file>resources/icons/power button2.png</file>
+    <file>resources/icons/setting3.png</file>
+    <file>resources/icons/smartphone34.png</file>
+    <file>resources/icons/touch19.png</file>
+    <file>resources/mp4.png</file>
+    <file>resources/Normal48.png</file>
+    <file>resources/Normal64.png</file>
+    <file>resources/Normal128.png</file>
+    <file>resources/Performance48.png</file>
+    <file>resources/Performance128.png</file>
+    <file>resources/power_off.png</file>
+    <file>resources/power_on.png</file>
+    <file>resources/record.png</file>
+    <file>resources/start.png</file>
+    <file>resources/stop.png</file>
+  </qresource>
+</RCC>

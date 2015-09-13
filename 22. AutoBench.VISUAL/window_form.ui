@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>1024</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1280</width>
+    <height>1024</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QFrame" name="frame">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QWidget" name="widget_2" native="true">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTableWidget" name="tableWidget">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <column>
+          <property name="text">
+           <string>Package</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Activity</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Task</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>File</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTextEdit" name="statusTextEdit">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="verticalScrollBarPolicy">
+          <enum>Qt::ScrollBarAlwaysOn</enum>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QProgressBar" name="progressBar">
+         <property name="value">
+          <number>0</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="widget_right" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap>../EmbedQtChart/resources/AnalyzerLogo300.jpg</pixmap>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QListWidget" name="listWidget">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="font">
+          <font>
+           <family>Ubuntu Condensed</family>
+           <pointsize>12</pointsize>
+           <weight>50</weight>
+           <bold>false</bold>
+          </font>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget" native="true">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="QGroupBox" name="groupBox">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="title">
+             <string>Measurements</string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_4">
+             <item>
+              <widget class="QCheckBox" name="chkboxBENMK_Drawtime">
+               <property name="text">
+                <string>Drawtime (ms)</string>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="chkboxBENMK_Launching">
+               <property name="text">
+                <string>Launching time (ms)</string>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="chkboxBENMK_Memory">
+               <property name="text">
+                <string>Memory (KB)</string>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="chkboxDEBUG_Excel">
+               <property name="text">
+                <string>Generate excel (xls)</string>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="groupBox_2">
+            <property name="title">
+             <string>Debug</string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_5">
+             <item>
+              <widget class="QCheckBox" name="chkboxDEBUG_Systrace">
+               <property name="text">
+                <string>Systrace (html)</string>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="chkboxDEBUG_DrawtimeGraph">
+               <property name="enabled">
+                <bool>true</bool>
+               </property>
+               <property name="acceptDrops">
+                <bool>false</bool>
+               </property>
+               <property name="text">
+                <string>Drawtime in Graph (png)</string>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="chkboxDEBUG_ColorDebug">
+               <property name="enabled">
+                <bool>true</bool>
+               </property>
+               <property name="acceptDrops">
+                <bool>false</bool>
+               </property>
+               <property name="text">
+                <string>Path Color debug (png)</string>
+               </property>
+               <property name="checked">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="chkboxDEBUG_ScreenCapture">
+               <property name="text">
+                <string>Screen Capture (png)</string>
+               </property>
+               <property name="checked">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="chkboxDEBUG_SVG">
+               <property name="text">
+                <string>SVG output (txt)</string>
+               </property>
+               <property name="checked">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="chkboxDEBUG_PathGroupInfo">
+               <property name="text">
+                <string>Path Group info (txt)</string>
+               </property>
+               <property name="checked">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="chkboxDEBUG_PathCacheInfo">
+               <property name="text">
+                <string>HWUI PathCache Info (txt)</string>
+               </property>
+               <property name="checked">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_button" native="true">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>60</height>
+          </size>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <property name="margin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="pushButton_Start">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>60</height>
+             </size>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>24</pointsize>
+              <weight>75</weight>
+              <italic>false</italic>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Batch Run</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1280</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_File">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <addaction name="actionConnect"/>
+   </widget>
+   <addaction name="menu_File"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>48</width>
+     <height>48</height>
+    </size>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionConnect"/>
+   <addaction name="actionInstall2Device"/>
+   <addaction name="separator"/>
+   <addaction name="actionOpenConfig"/>
+   <addaction name="separator"/>
+   <addaction name="actionSystrace"/>
+   <addaction name="actionSystraceEvent"/>
+   <addaction name="actionOpenSystraceFile"/>
+   <addaction name="separator"/>
+   <addaction name="actionEventRecord"/>
+   <addaction name="actionEventStop"/>
+   <addaction name="actionEventReplay"/>
+   <addaction name="separator"/>
+   <addaction name="actionPerformanceMode"/>
+   <addaction name="actionNormalMode"/>
+   <addaction name="separator"/>
+   <addaction name="actionCaptureScreen"/>
+   <addaction name="separator"/>
+   <addaction name="actionSetting"/>
+  </widget>
+  <action name="actionConnect">
+   <property name="icon">
+    <iconset resource="benchmk.qrc">
+     <normaloff>:/basic/resources/icons/plug42.png</normaloff>
+     <normalon>:/basic/icons/plug42.png</normalon>:/basic/resources/icons/plug42.png</iconset>
+   </property>
+   <property name="text">
+    <string>Connect</string>
+   </property>
+   <property name="toolTip">
+    <string>Connect to devices</string>
+   </property>
+  </action>
+  <action name="actionOpenConfig">
+   <property name="icon">
+    <iconset>
+     <normaloff>resources/icons/folder80.png</normaloff>resources/icons/folder80.png</iconset>
+   </property>
+   <property name="text">
+    <string>OpenConfig</string>
+   </property>
+   <property name="toolTip">
+    <string>Open a config file</string>
+   </property>
+  </action>
+  <action name="actionInstall2Device">
+   <property name="icon">
+    <iconset resource="benchmk.qrc">
+     <normaloff>:/basic/resources/icons/smartphone34.png</normaloff>:/basic/resources/icons/smartphone34.png</iconset>
+   </property>
+   <property name="text">
+    <string>Install2Device</string>
+   </property>
+   <property name="toolTip">
+    <string>Install spr, event and tool to the device</string>
+   </property>
+  </action>
+  <action name="actionSetting">
+   <property name="icon">
+    <iconset resource="benchmk.qrc">
+     <normaloff>:/basic/resources/icons/setting3.png</normaloff>:/basic/resources/icons/setting3.png</iconset>
+   </property>
+   <property name="text">
+    <string>Setting</string>
+   </property>
+   <property name="toolTip">
+    <string>Setting</string>
+   </property>
+  </action>
+  <action name="actionSystrace">
+   <property name="icon">
+    <iconset resource="benchmk.qrc">
+     <normaloff>:/basic/resources/icons/document65.png</normaloff>:/basic/resources/icons/document65.png</iconset>
+   </property>
+   <property name="text">
+    <string>Systrace</string>
+   </property>
+   <property name="toolTip">
+    <string>Analyse systrace</string>
+   </property>
+  </action>
+  <action name="actionOpenSystraceFile">
+   <property name="icon">
+    <iconset resource="benchmk.qrc">
+     <normaloff>:/basic/resources/icons/folder81.png</normaloff>:/basic/resources/icons/folder81.png</iconset>
+   </property>
+   <property name="text">
+    <string>OpenSystraceFile</string>
+   </property>
+   <property name="toolTip">
+    <string>Open a systrace file in chromium-browser</string>
+   </property>
+  </action>
+  <action name="actionEventRecord">
+   <property name="icon">
+    <iconset resource="benchmk.qrc">
+     <normaloff>:/basic/resources/record.png</normaloff>:/basic/resources/record.png</iconset>
+   </property>
+   <property name="text">
+    <string>EventRecord</string>
+   </property>
+   <property name="toolTip">
+    <string>EventRecord</string>
+   </property>
+  </action>
+  <action name="actionEventStop">
+   <property name="icon">
+    <iconset resource="benchmk.qrc">
+     <normaloff>:/basic/resources/stop.png</normaloff>:/basic/resources/stop.png</iconset>
+   </property>
+   <property name="text">
+    <string>EventStop</string>
+   </property>
+   <property name="toolTip">
+    <string>Stop Event </string>
+   </property>
+  </action>
+  <action name="actionEventReplay">
+   <property name="icon">
+    <iconset resource="benchmk.qrc">
+     <normaloff>:/basic/resources/start.png</normaloff>:/basic/resources/start.png</iconset>
+   </property>
+   <property name="text">
+    <string>EventReplay</string>
+   </property>
+   <property name="toolTip">
+    <string>Replay Event</string>
+   </property>
+  </action>
+  <action name="actionCaptureScreen">
+   <property name="icon">
+    <iconset resource="benchmk.qrc">
+     <normaloff>:/basic/resources/capture.png</normaloff>:/basic/resources/capture.png</iconset>
+   </property>
+   <property name="text">
+    <string>CaptureScreen</string>
+   </property>
+   <property name="toolTip">
+    <string>Screen capture</string>
+   </property>
+  </action>
+  <action name="actionPerformanceMode">
+   <property name="icon">
+    <iconset resource="benchmk.qrc">
+     <normaloff>:/basic/resources/Performance48.png</normaloff>:/basic/resources/Performance48.png</iconset>
+   </property>
+   <property name="text">
+    <string>PerformanceMode</string>
+   </property>
+   <property name="toolTip">
+    <string>Performance Mode</string>
+   </property>
+  </action>
+  <action name="actionNormalMode">
+   <property name="icon">
+    <iconset resource="benchmk.qrc">
+     <normaloff>:/basic/resources/Normal48.png</normaloff>:/basic/resources/Normal48.png</iconset>
+   </property>
+   <property name="text">
+    <string>NormalMode</string>
+   </property>
+   <property name="toolTip">
+    <string>Normal Mode</string>
+   </property>
+  </action>
+  <action name="actionSystraceEvent">
+   <property name="icon">
+    <iconset resource="benchmk.qrc">
+     <normaloff>:/basic/resources/icons/document65.png</normaloff>:/basic/resources/icons/document65.png</iconset>
+   </property>
+   <property name="text">
+    <string>SystraceEvent</string>
+   </property>
+   <property name="toolTip">
+    <string>Systrace an event file</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="benchmk.qrc"/>
+ </resources>
+ <connections/>
+</ui>
