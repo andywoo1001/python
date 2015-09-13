@@ -1,0 +1,22 @@
+ro.build.date=Fri Jul 24 19:06:31 KST 2015
+ro.build.type=eng
+model=SAMSUNG-SM-N920A
+ro.product.name=noblelteuc
+ro.product.device=noblelteatt
+ro.product.board=universal7420
+ro.board.platform=exynos5
+ro.build.product=noblelteatt
+ro.build.PDA=N920AUCU1AOG7
+
+ro.hwui.texture_cache_size=88
+ro.hwui.layer_cache_size=58
+ro.hwui.path_cache_size=16
+ro.hwui.shape_cache_size=4
+ro.hwui.gradient_cache_size=2
+ro.hwui.drop_shadow_cache_size=8
+ro.hwui.r_buffer_cache_size=4
+ro.hwui.text_small_cache_width=2048
+ro.hwui.text_small_cache_height=2048
+ro.hwui.text_large_cache_width=4096
+ro.hwui.text_large_cache_height=4096
+ro.hwui.fbo_cache_size=16

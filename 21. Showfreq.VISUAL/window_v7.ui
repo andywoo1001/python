@@ -1,0 +1,1282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>1024</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1280</width>
+    <height>1024</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QWidget" name="widget_center" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <layout class="QVBoxLayout" name="Layout_System">
+       <item>
+        <widget class="QSlider" name="SlideBar">
+         <property name="minimum">
+          <number>13</number>
+         </property>
+         <property name="maximum">
+          <number>35</number>
+         </property>
+         <property name="value">
+          <number>15</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="widget_right" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap resource="resources.qrc">:/basic icons/resources/AnalyzerLogo300.jpg</pixmap>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget" native="true">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <widget class="QLCDNumber" name="LCD_DVFS_MAX">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>294</y>
+            <width>141</width>
+            <height>51</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <stylestrategy>PreferDefault</stylestrategy>
+           </font>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Panel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Sunken</enum>
+          </property>
+         </widget>
+         <widget class="QLCDNumber" name="LCD_DVFS_MIN">
+          <property name="geometry">
+           <rect>
+            <x>150</x>
+            <y>294</y>
+            <width>141</width>
+            <height>51</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <stylestrategy>PreferDefault</stylestrategy>
+           </font>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Panel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Sunken</enum>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_13">
+          <property name="geometry">
+           <rect>
+            <x>162</x>
+            <y>277</y>
+            <width>91</width>
+            <height>17</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>DVFS Min</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_12">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>278</y>
+            <width>101</width>
+            <height>17</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>DVFS Max</string>
+          </property>
+         </widget>
+         <widget class="QLCDNumber" name="LCD_BUS">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>570</y>
+            <width>141</width>
+            <height>51</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <stylestrategy>PreferDefault</stylestrategy>
+           </font>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Panel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Sunken</enum>
+          </property>
+         </widget>
+         <widget class="QLCDNumber" name="LCD_DDR">
+          <property name="geometry">
+           <rect>
+            <x>150</x>
+            <y>500</y>
+            <width>141</width>
+            <height>51</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <stylestrategy>PreferDefault</stylestrategy>
+           </font>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Panel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Sunken</enum>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_10">
+          <property name="geometry">
+           <rect>
+            <x>164</x>
+            <y>207</y>
+            <width>101</width>
+            <height>17</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>GPU Freq</string>
+          </property>
+         </widget>
+         <widget class="QLCDNumber" name="LCD_GPU_FREQ">
+          <property name="geometry">
+           <rect>
+            <x>150</x>
+            <y>224</y>
+            <width>141</width>
+            <height>51</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <stylestrategy>PreferDefault</stylestrategy>
+           </font>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Panel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Sunken</enum>
+          </property>
+         </widget>
+         <widget class="QLCDNumber" name="LCD_GPU_UTIL">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>224</y>
+            <width>141</width>
+            <height>51</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <stylestrategy>PreferDefault</stylestrategy>
+           </font>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Panel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Sunken</enum>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_14">
+          <property name="geometry">
+           <rect>
+            <x>158</x>
+            <y>483</y>
+            <width>101</width>
+            <height>17</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>DDR</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_15">
+          <property name="geometry">
+           <rect>
+            <x>9</x>
+            <y>554</y>
+            <width>101</width>
+            <height>17</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>BUS</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_11">
+          <property name="geometry">
+           <rect>
+            <x>12</x>
+            <y>207</y>
+            <width>101</width>
+            <height>17</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>GPU Util</string>
+          </property>
+         </widget>
+         <widget class="QLCDNumber" name="LCD_GPU">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>502</y>
+            <width>141</width>
+            <height>51</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <stylestrategy>PreferDefault</stylestrategy>
+           </font>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Panel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Sunken</enum>
+          </property>
+         </widget>
+         <widget class="QLCDNumber" name="LCD_CPU_G0">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>432</y>
+            <width>141</width>
+            <height>51</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <stylestrategy>PreferDefault</stylestrategy>
+           </font>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Panel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Sunken</enum>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_5">
+          <property name="geometry">
+           <rect>
+            <x>157</x>
+            <y>347</y>
+            <width>66</width>
+            <height>17</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>PST</string>
+          </property>
+         </widget>
+         <widget class="QLCDNumber" name="LCD_CPU_G1">
+          <property name="geometry">
+           <rect>
+            <x>150</x>
+            <y>432</y>
+            <width>141</width>
+            <height>51</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <stylestrategy>PreferDefault</stylestrategy>
+           </font>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Panel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Sunken</enum>
+          </property>
+         </widget>
+         <widget class="QLCDNumber" name="LCD_PST">
+          <property name="geometry">
+           <rect>
+            <x>150</x>
+            <y>364</y>
+            <width>141</width>
+            <height>51</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <stylestrategy>PreferDefault</stylestrategy>
+           </font>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Panel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Sunken</enum>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_3">
+          <property name="geometry">
+           <rect>
+            <x>6</x>
+            <y>482</y>
+            <width>66</width>
+            <height>17</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>GPU</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_4">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>348</y>
+            <width>66</width>
+            <height>17</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>APT</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_2">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>416</y>
+            <width>66</width>
+            <height>17</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>CPU0</string>
+          </property>
+         </widget>
+         <widget class="QLCDNumber" name="LCD_APT">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>364</y>
+            <width>141</width>
+            <height>51</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <stylestrategy>PreferDefault</stylestrategy>
+           </font>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Panel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Sunken</enum>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_6">
+          <property name="geometry">
+           <rect>
+            <x>160</x>
+            <y>415</y>
+            <width>66</width>
+            <height>17</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>CPU1</string>
+          </property>
+         </widget>
+         <widget class="QLCDNumber" name="LCD_CPU0">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>119</y>
+            <width>71</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
+          </property>
+          <property name="smallDecimalPoint">
+           <bool>false</bool>
+          </property>
+          <property name="numDigits">
+           <number>4</number>
+          </property>
+          <property name="segmentStyle">
+           <enum>QLCDNumber::Flat</enum>
+          </property>
+         </widget>
+         <widget class="QLCDNumber" name="LCD_CPU1">
+          <property name="geometry">
+           <rect>
+            <x>80</x>
+            <y>119</y>
+            <width>71</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
+          </property>
+          <property name="numDigits">
+           <number>4</number>
+          </property>
+          <property name="segmentStyle">
+           <enum>QLCDNumber::Flat</enum>
+          </property>
+         </widget>
+         <widget class="QLCDNumber" name="LCD_CPU2">
+          <property name="geometry">
+           <rect>
+            <x>150</x>
+            <y>119</y>
+            <width>71</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
+          </property>
+          <property name="numDigits">
+           <number>4</number>
+          </property>
+          <property name="segmentStyle">
+           <enum>QLCDNumber::Flat</enum>
+          </property>
+         </widget>
+         <widget class="QLCDNumber" name="LCD_CPU3">
+          <property name="geometry">
+           <rect>
+            <x>227</x>
+            <y>119</y>
+            <width>71</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
+          </property>
+          <property name="numDigits">
+           <number>4</number>
+          </property>
+          <property name="segmentStyle">
+           <enum>QLCDNumber::Flat</enum>
+          </property>
+         </widget>
+         <widget class="QLCDNumber" name="LCD_CPU4">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>171</y>
+            <width>71</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
+          </property>
+          <property name="numDigits">
+           <number>4</number>
+          </property>
+          <property name="segmentStyle">
+           <enum>QLCDNumber::Flat</enum>
+          </property>
+         </widget>
+         <widget class="QLCDNumber" name="LCD_CPU6">
+          <property name="geometry">
+           <rect>
+            <x>150</x>
+            <y>171</y>
+            <width>71</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
+          </property>
+          <property name="numDigits">
+           <number>4</number>
+          </property>
+          <property name="segmentStyle">
+           <enum>QLCDNumber::Flat</enum>
+          </property>
+         </widget>
+         <widget class="QLCDNumber" name="LCD_CPU7">
+          <property name="geometry">
+           <rect>
+            <x>226</x>
+            <y>171</y>
+            <width>71</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
+          </property>
+          <property name="numDigits">
+           <number>4</number>
+          </property>
+          <property name="segmentStyle">
+           <enum>QLCDNumber::Flat</enum>
+          </property>
+         </widget>
+         <widget class="QLCDNumber" name="LCD_CPU5">
+          <property name="geometry">
+           <rect>
+            <x>80</x>
+            <y>171</y>
+            <width>71</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::NoFrame</enum>
+          </property>
+          <property name="numDigits">
+           <number>4</number>
+          </property>
+          <property name="segmentStyle">
+           <enum>QLCDNumber::Flat</enum>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_16">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>102</y>
+            <width>101</width>
+            <height>17</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Little Cores</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_17">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>154</y>
+            <width>71</width>
+            <height>17</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>Big Cores</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_7">
+          <property name="geometry">
+           <rect>
+            <x>36</x>
+            <y>0</y>
+            <width>41</width>
+            <height>17</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>LITTLE</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_8">
+          <property name="geometry">
+           <rect>
+            <x>146</x>
+            <y>0</y>
+            <width>21</width>
+            <height>17</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>BIG</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_9">
+          <property name="geometry">
+           <rect>
+            <x>239</x>
+            <y>0</y>
+            <width>31</width>
+            <height>17</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>9</pointsize>
+            <weight>75</weight>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>GPU</string>
+          </property>
+         </widget>
+         <widget class="QDial" name="dial_Little">
+          <property name="geometry">
+           <rect>
+            <x>10</x>
+            <y>20</y>
+            <width>91</width>
+            <height>81</height>
+           </rect>
+          </property>
+          <property name="minimum">
+           <number>400</number>
+          </property>
+          <property name="maximum">
+           <number>1500</number>
+          </property>
+          <property name="singleStep">
+           <number>50</number>
+          </property>
+          <property name="pageStep">
+           <number>100</number>
+          </property>
+          <property name="value">
+           <number>400</number>
+          </property>
+          <property name="sliderPosition">
+           <number>400</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="invertedAppearance">
+           <bool>false</bool>
+          </property>
+          <property name="invertedControls">
+           <bool>false</bool>
+          </property>
+          <property name="notchesVisible">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_little_min">
+          <property name="geometry">
+           <rect>
+            <x>14</x>
+            <y>4</y>
+            <width>31</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>8</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>000</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_little_max">
+          <property name="geometry">
+           <rect>
+            <x>79</x>
+            <y>3</y>
+            <width>31</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>8</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>0000</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_big_min">
+          <property name="geometry">
+           <rect>
+            <x>125</x>
+            <y>3</y>
+            <width>31</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>8</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>000</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_big_max">
+          <property name="geometry">
+           <rect>
+            <x>170</x>
+            <y>3</y>
+            <width>31</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>8</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>0000</string>
+          </property>
+         </widget>
+         <widget class="QDial" name="dial_Big">
+          <property name="geometry">
+           <rect>
+            <x>116</x>
+            <y>20</y>
+            <width>81</width>
+            <height>81</height>
+           </rect>
+          </property>
+          <property name="minimum">
+           <number>800</number>
+          </property>
+          <property name="maximum">
+           <number>2100</number>
+          </property>
+          <property name="singleStep">
+           <number>50</number>
+          </property>
+          <property name="pageStep">
+           <number>100</number>
+          </property>
+          <property name="value">
+           <number>800</number>
+          </property>
+          <property name="sliderPosition">
+           <number>800</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="invertedAppearance">
+           <bool>false</bool>
+          </property>
+          <property name="invertedControls">
+           <bool>false</bool>
+          </property>
+          <property name="notchesVisible">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QDial" name="dial_GPU">
+          <property name="geometry">
+           <rect>
+            <x>211</x>
+            <y>19</y>
+            <width>81</width>
+            <height>81</height>
+           </rect>
+          </property>
+          <property name="minimum">
+           <number>0</number>
+          </property>
+          <property name="maximum">
+           <number>700</number>
+          </property>
+          <property name="singleStep">
+           <number>50</number>
+          </property>
+          <property name="pageStep">
+           <number>100</number>
+          </property>
+          <property name="value">
+           <number>0</number>
+          </property>
+          <property name="sliderPosition">
+           <number>0</number>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="invertedAppearance">
+           <bool>false</bool>
+          </property>
+          <property name="invertedControls">
+           <bool>false</bool>
+          </property>
+          <property name="notchesVisible">
+           <bool>true</bool>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_gpu_max">
+          <property name="geometry">
+           <rect>
+            <x>267</x>
+            <y>2</y>
+            <width>31</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>8</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>000</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_gpu_min">
+          <property name="geometry">
+           <rect>
+            <x>218</x>
+            <y>2</y>
+            <width>21</width>
+            <height>16</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>8</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>000</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="label_18">
+          <property name="geometry">
+           <rect>
+            <x>159</x>
+            <y>554</y>
+            <width>101</width>
+            <height>17</height>
+           </rect>
+          </property>
+          <property name="text">
+           <string>FPS</string>
+          </property>
+         </widget>
+         <widget class="QLCDNumber" name="LCD_FPS">
+          <property name="geometry">
+           <rect>
+            <x>150</x>
+            <y>570</y>
+            <width>141</width>
+            <height>51</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <stylestrategy>PreferDefault</stylestrategy>
+           </font>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Panel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Sunken</enum>
+          </property>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QListWidget" name="listWidget">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="font">
+          <font>
+           <family>Ubuntu Condensed</family>
+           <pointsize>12</pointsize>
+           <weight>50</weight>
+           <bold>false</bold>
+          </font>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1280</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>48</width>
+     <height>48</height>
+    </size>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>LeftToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionConnect"/>
+   <addaction name="actionInstall2Device"/>
+   <addaction name="separator"/>
+   <addaction name="actionEventRecord"/>
+   <addaction name="actionEventStop"/>
+   <addaction name="actionEventReplay"/>
+   <addaction name="separator"/>
+   <addaction name="actionCaptureScreen"/>
+   <addaction name="actionMP4_Recording"/>
+   <addaction name="separator"/>
+   <addaction name="actionPerformanceMode"/>
+   <addaction name="actionNormalMode"/>
+   <addaction name="separator"/>
+   <addaction name="actionStart"/>
+   <addaction name="actionStop"/>
+  </widget>
+  <action name="actionConnect">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/basic icons/resources/icons/plug42.png</normaloff>:/basic icons/resources/icons/plug42.png</iconset>
+   </property>
+   <property name="text">
+    <string>Connect</string>
+   </property>
+   <property name="toolTip">
+    <string>Connect to device</string>
+   </property>
+  </action>
+  <action name="actionInstall2Device">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/basic icons/resources/icons/smartphone34.png</normaloff>:/basic icons/resources/icons/smartphone34.png</iconset>
+   </property>
+   <property name="text">
+    <string>Install2Device</string>
+   </property>
+   <property name="toolTip">
+    <string>Install showfreq to device</string>
+   </property>
+  </action>
+  <action name="actionEventRecord">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/basic icons/resources/record.png</normaloff>:/basic icons/resources/record.png</iconset>
+   </property>
+   <property name="text">
+    <string>EventRecord</string>
+   </property>
+   <property name="toolTip">
+    <string>Recording event</string>
+   </property>
+  </action>
+  <action name="actionEventStop">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/basic icons/resources/stop.png</normaloff>:/basic icons/resources/stop.png</iconset>
+   </property>
+   <property name="text">
+    <string>EventStop</string>
+   </property>
+   <property name="toolTip">
+    <string>Stop recording event</string>
+   </property>
+  </action>
+  <action name="actionEventReplay">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/basic icons/resources/start.png</normaloff>:/basic icons/resources/start.png</iconset>
+   </property>
+   <property name="text">
+    <string>EventReply</string>
+   </property>
+   <property name="toolTip">
+    <string>Replay event</string>
+   </property>
+  </action>
+  <action name="actionCaptureScreen">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/basic icons/resources/capture.png</normaloff>:/basic icons/resources/capture.png</iconset>
+   </property>
+   <property name="text">
+    <string>CaptureScreen</string>
+   </property>
+   <property name="toolTip">
+    <string>Screen capture</string>
+   </property>
+  </action>
+  <action name="actionMP4_Recording">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/basic icons/resources/mp4.png</normaloff>:/basic icons/resources/mp4.png</iconset>
+   </property>
+   <property name="text">
+    <string>MP4 Recording</string>
+   </property>
+   <property name="toolTip">
+    <string>Recording MP4 movie file</string>
+   </property>
+  </action>
+  <action name="actionPerformanceMode">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/basic icons/resources/Performance48.png</normaloff>:/basic icons/resources/Performance48.png</iconset>
+   </property>
+   <property name="text">
+    <string>PerformanceMode</string>
+   </property>
+   <property name="toolTip">
+    <string>Performance Mode</string>
+   </property>
+  </action>
+  <action name="actionNormalMode">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/basic icons/resources/Normal48.png</normaloff>:/basic icons/resources/Normal48.png</iconset>
+   </property>
+   <property name="text">
+    <string>NormalMode</string>
+   </property>
+   <property name="toolTip">
+    <string>Normal Mode</string>
+   </property>
+  </action>
+  <action name="actionStart">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/basic icons/resources/power_on.png</normaloff>:/basic icons/resources/power_on.png</iconset>
+   </property>
+   <property name="text">
+    <string>Start</string>
+   </property>
+   <property name="toolTip">
+    <string>Start analysis</string>
+   </property>
+  </action>
+  <action name="actionStop">
+   <property name="icon">
+    <iconset resource="resources.qrc">
+     <normaloff>:/basic icons/resources/power_off.png</normaloff>:/basic icons/resources/power_off.png</iconset>
+   </property>
+   <property name="text">
+    <string>Stop</string>
+   </property>
+   <property name="toolTip">
+    <string>Stop analysis</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>dial_Little</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>label_little_min</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1005</x>
+     <y>247</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>971</x>
+     <y>199</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dial_Little</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>label_little_max</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1038</x>
+     <y>264</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1053</x>
+     <y>203</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dial_Big</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>label_big_min</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1103</x>
+     <y>234</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1097</x>
+     <y>204</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dial_Big</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>label_big_max</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1133</x>
+     <y>246</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1140</x>
+     <y>198</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dial_GPU</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>label_gpu_min</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1212</x>
+     <y>245</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1185</x>
+     <y>197</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>dial_GPU</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>label_gpu_max</receiver>
+   <slot>setNum(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1236</x>
+     <y>245</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1245</x>
+     <y>200</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
